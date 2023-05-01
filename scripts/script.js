@@ -1,8 +1,10 @@
 const playBoard = document.querySelector(".play-board");
+const scoreElement = document.querySelector(".score");
 
 let setIntervalId;
 let foodX, foodY;
 let snakeBody = [];
+let score = 0;
 let gameOver = false;
 let snakeX = 5,
   snakeY = 10;
@@ -49,6 +51,9 @@ function initGame() {
   if (snakeX === foodX && snakeY === foodY) {
     changeFoodPosition();
     snakeBody.push([foodX, foodY]);
+    score++;
+
+    scoreElement.innerText = `Score: ${score}`;
   }
 
   for (let i = snakeBody.length - 1; i > 0; i--) {
