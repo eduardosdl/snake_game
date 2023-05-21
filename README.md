@@ -1,4 +1,4 @@
-# A Snaje Game
+# A Snake Game
 
 ## To Use
 - clone the repository
